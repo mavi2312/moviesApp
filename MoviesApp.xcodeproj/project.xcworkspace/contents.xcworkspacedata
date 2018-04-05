@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Lol/Documents/WorkspaceIOS/MoviesApp/MoviesApp/ratingIcon.png">
+   </FileRef>
+   <FileRef
       location = "self:MoviesApp.xcodeproj">
    </FileRef>
 </Workspace>

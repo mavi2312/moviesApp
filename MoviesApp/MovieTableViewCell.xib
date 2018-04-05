@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="129" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="MoviesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="129"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="128.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-Rk-ygY">
+                        <rect key="frame" x="18" y="13" width="328" height="102.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LDb-Q5-rUB">
+                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="102.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LDb-Q5-rUB" secondAttribute="height" multiplier="500:750" id="ebF-Ox-r71"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="KVo-ND-4yS">
+                                <rect key="frame" x="24" y="42" width="20" height="20"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="57G-5K-vPo">
+                                <rect key="frame" x="76" y="0.0" width="215" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lxp-5M-fbH">
+                                <rect key="frame" x="76" y="58.5" width="36" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="Q15-Oi-fVi"/>
+                                    <constraint firstAttribute="height" constant="34" id="l0Q-vh-rxj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqz-Lc-6LB">
+                                <rect key="frame" x="120" y="67" width="42" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Vow-yD-DT3"/>
+                                    <constraint firstAttribute="width" constant="42" id="cKV-Dx-Qch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pX-dC-5rV">
+                                <rect key="frame" x="296" y="40" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="4Fw-Xk-Xhs"/>
+                                    <constraint firstAttribute="width" secondItem="6pX-dC-5rV" secondAttribute="height" multiplier="1:1" id="6dq-Ro-557"/>
+                                </constraints>
+                                <color key="tintColor" red="0.3229660365" green="0.093634012670000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lxp-5M-fbH" firstAttribute="top" secondItem="57G-5K-vPo" secondAttribute="bottom" constant="8" id="3jc-AZ-HY1"/>
+                            <constraint firstItem="6pX-dC-5rV" firstAttribute="centerY" secondItem="QAf-Rk-ygY" secondAttribute="centerY" id="E3n-44-8hi"/>
+                            <constraint firstItem="LDb-Q5-rUB" firstAttribute="leading" secondItem="QAf-Rk-ygY" secondAttribute="leading" id="E7e-XB-z5R"/>
+                            <constraint firstItem="lxp-5M-fbH" firstAttribute="bottom" secondItem="LDb-Q5-rUB" secondAttribute="bottom" constant="-10" id="GjK-gm-HKd"/>
+                            <constraint firstItem="LDb-Q5-rUB" firstAttribute="top" secondItem="QAf-Rk-ygY" secondAttribute="top" id="H4o-ss-A4u"/>
+                            <constraint firstItem="KVo-ND-4yS" firstAttribute="centerX" secondItem="LDb-Q5-rUB" secondAttribute="centerX" id="MQm-qF-tfP"/>
+                            <constraint firstItem="57G-5K-vPo" firstAttribute="top" secondItem="LDb-Q5-rUB" secondAttribute="top" id="O9l-pY-JJi"/>
+                            <constraint firstItem="57G-5K-vPo" firstAttribute="leading" secondItem="LDb-Q5-rUB" secondAttribute="trailing" constant="7.5" id="Sug-jx-aaf"/>
+                            <constraint firstItem="Bqz-Lc-6LB" firstAttribute="centerY" secondItem="lxp-5M-fbH" secondAttribute="centerY" constant="3" id="ZCz-aV-GhP"/>
+                            <constraint firstItem="Bqz-Lc-6LB" firstAttribute="leading" secondItem="lxp-5M-fbH" secondAttribute="trailing" constant="8" id="fwZ-xF-N9W"/>
+                            <constraint firstItem="KVo-ND-4yS" firstAttribute="centerY" secondItem="LDb-Q5-rUB" secondAttribute="centerY" id="gEc-VZ-V9h"/>
+                            <constraint firstAttribute="trailing" secondItem="6pX-dC-5rV" secondAttribute="trailing" constant="10" id="gQA-Rc-TJW"/>
+                            <constraint firstItem="LDb-Q5-rUB" firstAttribute="height" secondItem="QAf-Rk-ygY" secondAttribute="height" id="may-0e-wub"/>
+                            <constraint firstItem="6pX-dC-5rV" firstAttribute="leading" secondItem="57G-5K-vPo" secondAttribute="trailing" constant="5" id="yPC-j0-HtO"/>
+                            <constraint firstItem="lxp-5M-fbH" firstAttribute="leading" secondItem="LDb-Q5-rUB" secondAttribute="trailing" constant="7.5" id="zOY-dh-vax"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QAf-Rk-ygY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Hew-rn-yVl"/>
+                    <constraint firstItem="QAf-Rk-ygY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="UUB-WZ-Gef"/>
+                    <constraint firstItem="QAf-Rk-ygY" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="Zhj-rx-eas"/>
+                    <constraint firstItem="QAf-Rk-ygY" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="mYD-Hj-FpK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="KVo-ND-4yS" id="eWW-Ug-Z78"/>
+                <outlet property="cardView" destination="QAf-Rk-ygY" id="rFg-ZX-sDt"/>
+                <outlet property="posterImageView" destination="LDb-Q5-rUB" id="TsZ-h1-vrZ"/>
+                <outlet property="ratingLabel" destination="Bqz-Lc-6LB" id="jpb-O2-ILP"/>
+                <outlet property="titleLabel" destination="57G-5K-vPo" id="ocN-WD-1aR"/>
+            </connections>
+            <point key="canvasLocation" x="47" y="94.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ratingIcon" width="50" height="50"/>
+    </resources>
+</document>

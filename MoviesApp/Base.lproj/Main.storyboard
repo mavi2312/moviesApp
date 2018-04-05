@@ -1,24 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iiS-Jn-raw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="MGO-WT-Jt4">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="iiS-Jn-raw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zrx-nq-Nb6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="J2c-ds-KaB" kind="relationship" relationship="rootViewController" id="AFl-xA-VHi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zeo-OP-BMC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32" y="1055"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="LWL-cZ-M2q">
+            <objects>
+                <viewController id="J2c-ds-KaB" customClass="ViewController" customModule="MoviesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8jP-it-iYm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bku-RO-ntN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="W02-7d-W1K"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Popular"/>
+                                    <segment title="Top Rated"/>
+                                </segments>
+                                <color key="tintColor" red="0.32296603649923428" green="0.093634012672980327" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="J2c-ds-KaB" eventType="valueChanged" id="3UF-pI-Hch"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gKb-a6-Yp5">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="J2c-ds-KaB" id="c1k-wA-VwS"/>
+                                    <outlet property="delegate" destination="J2c-ds-KaB" id="lfx-gA-Bff"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gKb-a6-Yp5" firstAttribute="top" secondItem="Bku-RO-ntN" secondAttribute="bottom" constant="1" id="1Ju-a8-dYz"/>
+                            <constraint firstItem="Bku-RO-ntN" firstAttribute="centerX" secondItem="IuH-uk-A99" secondAttribute="centerX" id="Hcq-9g-hx9"/>
+                            <constraint firstItem="Bku-RO-ntN" firstAttribute="width" secondItem="IuH-uk-A99" secondAttribute="width" id="P6D-as-Dy7"/>
+                            <constraint firstItem="gKb-a6-Yp5" firstAttribute="width" secondItem="IuH-uk-A99" secondAttribute="width" id="bLU-jg-Ddl"/>
+                            <constraint firstItem="Bku-RO-ntN" firstAttribute="top" secondItem="IuH-uk-A99" secondAttribute="top" id="cNV-SD-Kf2"/>
+                            <constraint firstItem="IuH-uk-A99" firstAttribute="bottom" secondItem="gKb-a6-Yp5" secondAttribute="bottom" id="lKo-e8-f8k"/>
+                            <constraint firstItem="gKb-a6-Yp5" firstAttribute="centerX" secondItem="IuH-uk-A99" secondAttribute="centerX" id="uwy-ol-2WS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IuH-uk-A99"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Movies" id="91L-dd-SHU"/>
+                    <connections>
+                        <outlet property="movieTableView" destination="gKb-a6-Yp5" id="0Ho-9Z-miy"/>
+                        <outlet property="orderTypeSegmentedControl" destination="Bku-RO-ntN" id="yYU-Fo-G2I"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0qZ-MO-SYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="725.60000000000002" y="1054.7226386806597"/>
         </scene>
     </scenes>
 </document>
